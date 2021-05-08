@@ -147,14 +147,6 @@ Node *new_num(int val) {
   return node;
 }
 
-Node *expr();
-Node *equality();
-Node *relational();
-Node *add();
-Node *mul();
-Node *unary();
-Node *primary();
-
 // expr = equality
 Node *expr(){
   return equality();
