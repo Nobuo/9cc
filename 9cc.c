@@ -94,6 +94,14 @@ Token *tokenize() {
       continue;
     }
 
+    // 変数
+    if ('a' <= *p && *p <= 'z')
+    {
+      cur = new_token(TK_IDENT, cur, p++);
+      cur->len = 1;
+      continue;
+    }
+
     // 複数の演算子に対応
     if (startswith(p, "==") || startswith(p, "!=") ||
         startswith(p, "<=") || startswith(p, ">=")) {

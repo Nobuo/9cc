@@ -7,3 +7,22 @@ docker build -t compilerbook --platform linux/x86_64 .
 docker run --rm -it -v $HOME/Documents/GitHub/9cc:/9cc compilerbook
 docker run --rm -it -v $HOME/Documents/GitHub/9cc:/9cc compilerbook
 docker run --rm -v $HOME/Documents/GitHub/9cc:/9cc -w /9cc compilerbook make test
+
+
+レジスタマシン
+スタックマシン
+
+https://www.mztn.org/lxasm64/amd04.html
+
+RSPとは？
+スタックポインタはサブルーチンコールの戻りアドレスをメモリに自動的に格納したり、PUSH、POP命令でレジスタを一時的に退避、
+復帰する場合に使われます。直接読み書きすることは余りありません。
+64ビットモードではESP、SP、SPLのように部分的にアクセスすることはないでしょう。
+
+RAX
+整数を入れられるレジスタはRAXを含めて合計で16個ある
+
+スタックポインタ
+スタックは、スタックの一番上のアドレスを保持する1つの変数のみを使って実装することができます。
+そのスタックトップを保持している記憶領域のことを「スタックポインタ」
+
