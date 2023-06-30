@@ -4,10 +4,10 @@ https://twitter.com/kanezoh_ninja/status/1407878054911778817
 amd64/ubuntu:latest
 docker build -t compilerbook --platform linux/x86_64 .
 
-docker run --rm -it -v $HOME/Documents/GitHub/9cc:/9cc compilerbook
-docker run --rm -it -v $HOME/Documents/GitHub/9cc:/9cc compilerbook
-docker run --rm -v $HOME/Documents/GitHub/9cc:/9cc -w /9cc compilerbook make test
+docker run --platform linux/x86_64 --rm -it -v $HOME/Documents/GitHub/9cc:/9cc compilerbook
+docker run --platform linux/x86_64 --rm -v $HOME/Documents/GitHub/9cc:/9cc -w /9cc compilerbook make test
 
+※https://gihyo.jp/dev/serial/01/mysql-road-construction-news/0167
 
 レジスタマシン
 スタックマシン
